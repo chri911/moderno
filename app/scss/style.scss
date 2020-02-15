@@ -52,7 +52,7 @@
         color: #fff;
         font-size: 14px;
         line-height: 30px;
-        font-weight: 500;
+        @include f500;
     }
 }
 //end header
@@ -71,13 +71,13 @@
     text-align: center;
     &-title{
         font-size: 48px;
-        font-weight: 700;
+        @include f700;
         margin-bottom: 28px;
         line-height: 72px;
     }
     &-text{
         font-size: 20px;
-        font-weight: 500;
+        @include f500;
         margin-bottom: 50px;
         line-height: 30px;
     }
@@ -93,12 +93,12 @@
             height: 56px;
             border: none;
             font-size: 14px;
-            font-weight: 500;
+            @include f500;
             padding-left: 25px;
             padding-right: 60px;
             &::placeholder{
                 color: #90a4ae;
-                font-weight: 500;
+                @include f500;
             }
         }
         button{
@@ -127,7 +127,7 @@
         background-color: #fff;
         color: $bg;
         font-size: 14px;
-        font-weight: 500;
+        @include f500;
         cursor: pointer;
         & + button{
             margin-left: 6px;
@@ -141,7 +141,7 @@
 }
 .products__inner-box{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 .product__item{
@@ -149,6 +149,7 @@
     width: 100%;
     box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
     margin-bottom: 30px;
+    margin-left: 5px;
     &-img{
     min-height:250px;
     background-repeat: no-repeat;
@@ -166,7 +167,7 @@
     }
     &-name{
         max-width: 310px;
-        font-weight: 500; 
+        @include f500; 
     }
     &-title{
         color: $bg;
@@ -181,7 +182,7 @@
     }
     &-price{
         font-size: 20px;
-        font-weight: 700;
+        @include f700;
         color: $bg;
     }
     &-info{
@@ -207,7 +208,7 @@
         }
         span{
             font-size: 14px;
-            font-weight: 500;
+            @include f500;
         }
     }
     &-star{
@@ -262,4 +263,54 @@
         }
     }
 }
-
+//end slider
+// start advantages
+.advantages{
+    background-color: $bg;
+    padding: 110px 0;
+}
+.advantages__title{
+    color: #fff;
+}
+.advantages__inner{
+    display: flex;
+    justify-content: space-between;
+}
+.advantages__item{
+    max-width: 370px;
+    text-align: center;
+    padding: 0 15px;
+    &:hover{
+        .advantages__item-image{
+            background-color: $green;
+            g{
+                fill: #fff;
+            }
+        }
+        .advantages__item-title{
+            color: $green;
+        }
+    }
+    &-image{
+        width: 114px;
+        height: 114px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 30px;
+        transition: all .5s;
+    }
+    &-title{
+        color:#fff;
+        font-size: 24px;
+        @include f500;
+        margin-bottom: 25px;
+        transition: all .5s;
+    }
+    &-text{
+        color: #b0bec5;
+        font-size: 15px;
+    }
+}
