@@ -382,3 +382,153 @@
     }
 }
 //end tutorial
+//start footer
+.footer{
+    background-color: $bg;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0 80px;
+    }
+    &__column{
+        max-width: 270px;
+        width: 100%;
+        &-menu{
+            max-width: 225px;
+        }
+        &-title{
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            color: #fff;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            &::after{
+                content:'';
+                position: absolute;
+                left: 2px;
+                height: 3px;
+                width: 51px;
+                background-color: $green;
+                bottom: 0;
+
+            }
+        }
+        &-text{
+            color: #b7c3c8;
+            margin-bottom: 30px;
+        }
+        &-info{
+            margin-top: 18px;
+            @include f500;
+            color: #fff;
+            padding-left: 30px;
+            position: relative;
+            &::before{
+                content: '\f041';
+                font-family: 'icomoon';
+                font-size: 18px;
+                color: $green;
+                position: absolute;
+                left: 0;
+            }
+            &-phone{
+                &::before{
+                    content: '\f095';
+                }
+            }
+        }
+        &-list{
+            a{
+                color: #b7c3c8;
+                margin-bottom: 13px;
+                padding-left: 22px;
+                position: relative;
+                &::before{
+                    content: "\f105";
+                    position: absolute;
+                    left: 0;
+                    font-family: 'icomoon';
+                    font-size: 18px;
+                    color: $green;
+                }
+            }
+        }
+        &-links{
+            margin-bottom: 33px;
+            li{
+                display: inline-block;
+                & + li{
+                    margin-left: 7px;
+                }
+            }
+            a{
+                height: 28px;
+                width: 28px;
+                background-image: url(../images/css_sprites.png);
+            }
+        }
+    }
+}
+.link-twitter{
+    background-position: -28px -0;
+}
+.link-youtube{
+    background-position: -0 -28px;
+}
+.link-pinterest{
+    background-position: -28px -28px;
+}
+.link-linkdin{
+    background-position: -56px -0;
+}
+.footer__form{
+    position: relative;
+    &-title{
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 15px;
+    }
+    input{
+        border: none;
+        background-color: #2f3c43;
+        display: block;
+        width: 100%;
+        height: 40px;
+        color: #fff;
+        font-size: 14px;
+        padding-left: 15px;
+        padding-right: 50px;
+        &::placeholder{
+            color: #697378;
+        }
+    }
+    button{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: $green;
+        height: 40px;
+        width: 43px;
+        border: none;
+        cursor: pointer;
+        &::before{
+            content: "\f124";
+            font-family: 'icomoon';
+            font-size: 20px;
+            color: #fff;
+        }
+    }
+}
+.footer__copy{
+    border-top: 1px solid #424d53;
+    &-text{
+    text-align: center;
+    color: #919699;
+    font-size: 15px;
+    line-height: 36px;
+    padding: 25px 0;
+    }
+}
+//end footer
