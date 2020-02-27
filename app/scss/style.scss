@@ -4,7 +4,9 @@
 
 
 //start header
-
+.header{
+    background-color: #fff;
+}
 .header__top-inner{
     display: flex;
     justify-content: space-between;
@@ -100,6 +102,7 @@
     }
 }
 .basket{
+    margin-right: 25px;
     span{
         background-color: #8bc34a;
     }
@@ -119,7 +122,7 @@
 }
 .user{
     padding-right: 20px;
-    margin-right: 25px;
+    
     position: relative;
     &::before{
         content:'\f0d7';
@@ -181,6 +184,7 @@
             height: auto;
             border-width: 1px;
             padding: 20px;
+            z-index: 2;
         }
     }
 }
@@ -193,6 +197,7 @@
     transition: all .3s;
     height: 0;
     overflow: hidden;
+    z-index: 2;
 }
 .basket__box,
 .message__box,
@@ -312,7 +317,9 @@
     background-color: #e85647;
     width: 123px;
 }
-  
+  .heder__btn-menu, .icon-user{
+      display: none;
+  }
 //end header
 
 
@@ -1140,3 +1147,9 @@ border-bottom: 1px solid #dde3e8;
          }
      }
 }
+//end product page
+
+
+
+
+@import 'media';
