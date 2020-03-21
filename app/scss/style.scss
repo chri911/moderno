@@ -1848,6 +1848,39 @@ border-bottom: 1px solid #dde3e8;
         padding: 0 10px;
         }
 }
+.jq-selectbox{
+    width: 100%;
+    max-width: 540px;
+    &__select {
+    height: 40px;
+    padding: 0 45px 0 10px;
+    border: 1px solid #dedede;
+    border-bottom-color: #dedede;
+    border-radius: 0;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 14px;
+    color: #707070;
+    text-shadow: none;
+    
+    
+}
+.jq-selectbox__trigger-arrow{
+    border: none;
+    top: 0px;
+right: 20px;
+line-height: 40px;
+    &::before{
+        content: "\f0d7";
+        font-family: 'icomoon';
+        color: #444;
+    }
+}
+.jq-selectbox__trigger{
+    border-left: none;
+}
+}
 .tabs .tab+.tab {
     border-left: none;
 }
@@ -2036,7 +2069,6 @@ border-bottom: 1px solid #dde3e8;
                 color: #d0d0d0;
                 left: 24px;
                 font-size: 14px;
-
             }
         }
     }
@@ -2044,7 +2076,132 @@ border-bottom: 1px solid #dde3e8;
 }
 
 //end profile
-
+//start upload
+.upload__inner{
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    margin-bottom: 110px;
+    &-title{
+        padding: 20px 30px;
+        color: $bg;
+        font-size: 24px;
+        @include f500;
+        border-bottom: 1px solid #d7d7d7;
+        margin-bottom: 40px;
+    }
+    &-content{
+        margin-bottom: 42px;
+        padding-right: 50px;
+        padding-left: 45px;
+    }
+    .upload-line{
+        display: flex;
+        margin-bottom: 25px;
+        label{
+            min-width: 175px;
+            padding-right: 15px;
+            color: #444;
+            padding-top: 5px;
+            span{
+                color: $green;
+                font-size: 24px;
+            }
+            &::placeholder{
+                color: #707070;
+            }
+        }
+    }
+    select,
+    input,
+    textarea{
+        width: 100%;
+        display: block;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 8px 18px;
+        outline: none;
+    }
+    textarea{
+        resize: none;
+        height: 150px;
+    }
+    button{
+        color: #fff;
+        background-color: $green;
+        margin-bottom: 65px;
+        border: none;
+        @include f500;
+        padding: 15px 36px;
+        margin-left: 215px;
+        cursor: pointer;
+    }
+    .jq-file {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        height: 40px;        
+        &__name{
+        border: 1px solid #d7d7d7;
+        background: #f9f9f9;
+        border-radius: 0;
+        height: 40px;
+        box-shadow: none;
+        padding: 0 105px;
+        font-size: 12px;
+        color: #707070;
+        line-height: 40px;
+        
+        }
+        &__browse {
+            top: 6px;
+            left: 5px;
+            right: auto;
+            padding: 0 10px;
+            border: 1px solid #d7d7d7;
+            border-radius: 0;
+            background: #fff;
+            box-shadow: none;
+            text-shadow: none;
+            display: block;
+            color: #444;
+            font-size: 12px;
+            font-family: 'Roboto-Regular', sans-serif;
+            line-height: 26px;
+        }
+    }
+    .jq-selectbox {
+        width: 100%;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        line-height: 40px;
+        color: #707070;
+        text-shadow: none;
+    }
+    .jq-selectbox__trigger-arrow{
+        border: none;
+        top: 0px;
+    right: 20px;
+    line-height: 40px;
+        &::before{
+            content: "\f0d7";
+            font-family: 'icomoon';
+            color: #444;
+        }
+    }
+    .jq-selectbox__trigger{
+        border-left: none;
+    }
+}
+//end upload
 
 
 @import 'media';
