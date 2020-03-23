@@ -486,6 +486,12 @@
 .products{
     padding: 110px 0;
     background-color: $grey;
+    
+}
+.products__wrapper,
+.product__slider-wrapper{
+    max-width: 1920px;
+    margin: 0 auto;
 }
 .products__inner-btn{
     text-align: center;
@@ -510,15 +516,20 @@
 }
 .products__inner-box{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin-left: -30px;
+}
+.products .product__item{
+    flex-basis: calc(25% - 30px);
+    margin-left: 30px;
 }
 .product__item{
     max-width: 442px;
+    
     width: 100%;
     box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
     margin-bottom: 30px;
-    margin-left: 5px;
     &-img{
     min-height:250px;
     background-repeat: no-repeat;
@@ -1063,9 +1074,9 @@ border-bottom: 1px solid #dde3e8;
 .product-page__content{
     width: 100%;
     .product__item{
-        max-width: 270px;
+        flex-basis: calc(33.333% - 30px);
         transition: all .5s;
-        
+        margin-left: 30px;
         &-img {
             min-height: 180px;
         }
@@ -1133,9 +1144,10 @@ border-bottom: 1px solid #dde3e8;
 }
 .product-page__item{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 30px;
+    margin-left: -30px;
 }
 .pagination{
     &__list{
@@ -1178,6 +1190,7 @@ border-bottom: 1px solid #dde3e8;
 .product__item{
     &.list{
         max-width: 100%;
+        flex-basis: 100%;
         .product__item-img{
             width: 240px;
             float: left;
@@ -2207,13 +2220,14 @@ line-height: 40px;
 .withdrawals__inner{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 145px;
 }
 .withdrawals__column{
     border: 1px solid #d7d7d7;
     background-color: #fff;
-    width: 570px;
-    margin-bottom: 145px;
+    max-width: 570px;
     height: 100%;
+    width: 100%;
     .withdrawals__title{
         padding: 20px 30px 25px;
         border-bottom: 1px solid #d7d7d7;
